@@ -13,6 +13,9 @@ public class GenerateEnviroment : MonoBehaviour
         for (int i = 0; i < 20; i++)
         {
             GameObject p = Pool.singleton.GetRandom();
+            if (p == null)
+                return;
+            
             p.SetActive(true);
             p.transform.position = dummyTraveller.transform.position;
             p.transform.rotation = dummyTraveller.transform.rotation;

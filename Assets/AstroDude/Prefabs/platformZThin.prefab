@@ -724,6 +724,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2500234705754777315}
   - component: {fileID: 2500234705745152279}
+  - component: {fileID: -9004688278515876506}
+  - component: {fileID: 8188246179287394715}
   m_Layer: 0
   m_Name: platformZThin
   m_TagString: platformZThin
@@ -780,6 +782,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-9004688278515876506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500234705754553027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cf46c3ef83e994d8716645cca536bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8188246179287394715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500234705754553027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cf46c3ef83e994d8716645cca536bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2500234705754553029
 GameObject:
   m_ObjectHideFlags: 0
