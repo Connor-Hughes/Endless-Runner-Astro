@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scroll : MonoBehaviour
 {
-    void fixedUpdate()
+    void FixedUpdate()
     {
         this.transform.position += PlayerController.player.transform.forward * -0.1f;
     }
