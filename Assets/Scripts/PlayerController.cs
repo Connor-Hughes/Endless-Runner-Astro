@@ -6,8 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     Animator anim;
     public static GameObject player;
+    public static GameObject currentPlatform;
 
-    // Start is called before the first frame update
+    void OnCollisionEnter(Collision other)
+    {
+        currentPlatform = other.gameObject;
+    }
+
     void Start()
     {
         anim = this.GetComponent<Animator>();

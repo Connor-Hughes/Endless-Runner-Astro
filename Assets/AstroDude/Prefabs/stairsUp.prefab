@@ -432,6 +432,7 @@ GameObject:
   - component: {fileID: 4028021565434903324}
   - component: {fileID: 6686207465875753222}
   - component: {fileID: -5816036438784110390}
+  - component: {fileID: 3156794406446302862}
   m_Layer: 0
   m_Name: stairsUp
   m_TagString: stairsUp
@@ -502,6 +503,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cf46c3ef83e994d8716645cca536bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &3156794406446302862
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028021565442312348}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: -4.62, y: 1, z: 1}
+  m_Center: {x: 0, y: 6.09, z: -4.75}
 --- !u!1 &4028021565442312350
 GameObject:
   m_ObjectHideFlags: 0

@@ -214,6 +214,8 @@ GameObject:
   - component: {fileID: 5812541134322323663}
   - component: {fileID: 6790953730413279191}
   - component: {fileID: 4028842532189712347}
+  - component: {fileID: 4487584119287961076}
+  - component: {fileID: 4949693329873708001}
   m_Layer: 0
   m_Name: platformTSection
   m_TagString: platformTSection
@@ -287,6 +289,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cf46c3ef83e994d8716645cca536bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &4487584119287961076
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812541134315037451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.43, y: 1, z: 4.97}
+  m_Center: {x: -3.95, y: 1.07, z: 0.09}
+--- !u!65 &4949693329873708001
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812541134315037451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.43, y: 1, z: 4.97}
+  m_Center: {x: 4.11, y: 1.07, z: -0.04}
 --- !u!1 &5812541134315037453
 GameObject:
   m_ObjectHideFlags: 0
