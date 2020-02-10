@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 4477819733042449035}
   - component: {fileID: -7045916215794430414}
   - component: {fileID: 6755055184225876207}
+  - component: {fileID: 8308500874934424817}
   m_Layer: 0
   m_Name: platformZSplit
   m_TagString: platformZSplit
@@ -282,7 +283,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.72, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.76, z: -4.48}
+  m_Center: {x: 0, y: 1.12, z: -4.48}
+--- !u!114 &8308500874934424817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221387231145150600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6601605dc1799041b25c79c733350a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7221387231145150602
 GameObject:
   m_ObjectHideFlags: 0

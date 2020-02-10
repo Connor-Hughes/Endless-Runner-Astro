@@ -17,6 +17,12 @@ public class PlayerController : MonoBehaviour
     {
         anim = this.GetComponent<Animator>();
         player = this.gameObject;
+        GenerateEnviroment.RunDummy();
+    }
+
+    void OnTriggerEnter(Collision other)
+    {
+        GenerateEnviroment.RunDummy();
     }
 
     void StopJump()
@@ -50,11 +56,11 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
-            this.transform.Translate(-0.2f, 0, 0);
+            this.transform.Translate(-0.5f, 0, 0);
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            this.transform.Translate(0.2f, 0, 0);
+            this.transform.Translate(0.5f, 0, 0);
         }
     }
 }
