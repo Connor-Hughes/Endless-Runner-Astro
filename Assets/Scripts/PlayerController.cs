@@ -17,10 +17,11 @@ public class PlayerController : MonoBehaviour
     {
         anim = this.GetComponent<Animator>();
         player = this.gameObject;
+
         GenerateEnviroment.RunDummy();
     }
 
-    void OnTriggerEnter(Collision other)
+    void OnTriggerEnter(Collider other) //error
     {
         GenerateEnviroment.RunDummy();
     }
@@ -35,7 +36,6 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isMagic", false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && anim.GetBool("isMagic") == false)

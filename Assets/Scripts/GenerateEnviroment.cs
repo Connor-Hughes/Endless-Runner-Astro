@@ -19,10 +19,9 @@ public class GenerateEnviroment : MonoBehaviour
 
         if (lastPlatform != null) //setting the dummy to be one tile ahead
         {
-            dummyTraveller.transform.position = lastPlatform.transform.position +
-                                                PlayerController.player.transform.forward * 10;
+            dummyTraveller.transform.position = lastPlatform.transform.position + PlayerController.player.transform.forward * 10;
 
-            if (lastPlatform.tag == "StairsUp")
+            if (lastPlatform.tag == "stairsUp")
             {
                 dummyTraveller.transform.Translate(0, 5, 0);
             }
@@ -33,7 +32,7 @@ public class GenerateEnviroment : MonoBehaviour
         p.transform.position = dummyTraveller.transform.position;
         p.transform.rotation = dummyTraveller.transform.rotation;
 
-        if (p.tag == "StairsDown")
+        if (p.tag == "stairsDown")
         {
             dummyTraveller.transform.Translate(0, -5, 0);
             p.transform.Rotate(0, 180, 0);
