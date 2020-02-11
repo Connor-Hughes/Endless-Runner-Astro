@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     public static GameObject player;
     public static GameObject currentPlatform;
+    bool canTurn = false;
 
     void OnCollisionEnter(Collision other)
     {
@@ -21,9 +22,26 @@ public class PlayerController : MonoBehaviour
         GenerateEnviroment.RunDummy();
     }
 
-    void OnTriggerEnter(Collider other) //error
+    void OnTriggerEnter(Collider other) 
     {
-        GenerateEnviroment.RunDummy();
+        if (other is BoxCollider && GenerateEnviroment.lastPlatform.tag != "platformTSection")  /////
+        {
+            GenerateEnviroment.RunDummy();
+        }
+
+        if (other is SphereCollider)
+        {
+            canTurn = true;
+        }
+            
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other is SphereCollider)
+        {
+            canTurn = false;
+        }
     }
 
     void StopJump()
@@ -46,13 +64,17 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isMagic", true);
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && canTurn)
         {
             this.transform.Rotate(Vector3.up * 90);
+            GenerateEnviroment.dummyTraveller.transform.forward = -this.transform.forward; ////
+            GenerateEnviroment.RunDummy();
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && canTurn)
         {
             this.transform.Rotate(Vector3.up * -90);
+            GenerateEnviroment.dummyTraveller.transform.forward = -this.transform.forward; ////
+            GenerateEnviroment.RunDummy();
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {

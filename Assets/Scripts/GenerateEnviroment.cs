@@ -19,7 +19,14 @@ public class GenerateEnviroment : MonoBehaviour
 
         if (lastPlatform != null) //setting the dummy to be one tile ahead
         {
-            dummyTraveller.transform.position = lastPlatform.transform.position + PlayerController.player.transform.forward * 10;
+            if (lastPlatform.tag == "platformTSection")
+            {
+                dummyTraveller.transform.position = lastPlatform.transform.position + PlayerController.player.transform.forward * 20; ////
+            }
+            else
+            {
+                dummyTraveller.transform.position = lastPlatform.transform.position + PlayerController.player.transform.forward * 10; ////
+            }
 
             if (lastPlatform.tag == "stairsUp")
             {
