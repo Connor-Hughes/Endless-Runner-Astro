@@ -372,8 +372,15 @@ MonoBehaviour:
       type: 3}
     amount: 2
     expandable: 0
+  - prefab: {fileID: 6002641563855381705, guid: 674c16e377c0f094c89ec73c14a85ca6,
+      type: 3}
+    amount: 2
+    expandable: 0
   - prefab: {fileID: 5812541134315037451, guid: 6d091fb3e0d1c4b49bc5281e52171cfa,
       type: 3}
+    amount: 2
+    expandable: 0
+  - prefab: {fileID: 644612343702067979, guid: 1ef0679c4774941408147de95b9d63cf, type: 3}
     amount: 2
     expandable: 0
   pooledItems: []
