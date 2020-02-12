@@ -11,6 +11,8 @@ TagManager:
   - stairsUp
   - platformTSection
   - Fire
+  - Wall
+  - Spell
   layers:
   - Default
   - TransparentFX

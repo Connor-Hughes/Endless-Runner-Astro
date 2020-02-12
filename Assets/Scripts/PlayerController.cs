@@ -12,9 +12,13 @@ public class PlayerController : MonoBehaviour
     public static bool isDead = false;
     Rigidbody rb;
 
+    public GameObject magic;
+    public Transform magicStartPos;
+    Rigidbody magicRb;
+
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Fire")
+        if (other.gameObject.tag == "Fire" || other.gameObject.tag == "Wall")
         {
             anim.SetTrigger("isDead");
             isDead = true;
@@ -30,15 +34,29 @@ public class PlayerController : MonoBehaviour
     {
         anim = this.GetComponent<Animator>();
         rb = this.GetComponent<Rigidbody>();
+        magicRb = magic.GetComponent<Rigidbody>();
         player = this.gameObject;
         startPosition = player.transform.position;
 
         GenerateEnviroment.RunDummy();
     }
 
+    void CastMagic()
+    {
+        magic.transform.position = magicStartPos.position;
+        magic.SetActive(true);
+        magicRb.AddForce(this.transform.forward * 4000);
+        Invoke("KillMagic", 1);
+    }
+
+    void KillMagic()
+    {
+        magic.SetActive(false);
+    }
+
     void OnTriggerEnter(Collider other) 
     {
-        if (other is BoxCollider && GenerateEnviroment.lastPlatform.tag != "platformTSection")  /////
+        if (other is BoxCollider && GenerateEnviroment.lastPlatform.tag != "platformTSection")
         {
             GenerateEnviroment.RunDummy();
         }
