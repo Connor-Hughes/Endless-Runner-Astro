@@ -62,12 +62,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Coin\PickUp.cs" />
     <Compile Include="Assets\Scripts\Deactivate.cs" />
     <Compile Include="Assets\Scripts\DestroyWall.cs" />
+    <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\GenerateEnviroment.cs" />
     <Compile Include="Assets\Scripts\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Pool.cs" />
+    <Compile Include="Assets\Scripts\RegisterScore.cs" />
     <Compile Include="Assets\Scripts\Scroll.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity Projects (N)/Endelss Runnder Astro(N)/Endless Runner Astro/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
