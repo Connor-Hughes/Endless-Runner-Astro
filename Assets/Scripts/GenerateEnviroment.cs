@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GenerateEnviroment : MonoBehaviour
 {
     static public GameObject dummyTraveller;
     static public GameObject lastPlatform;
+
+    public void QuitToMenu()
+    {
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+    }
 
     void Awake()
     {

@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         GenerateEnviroment.RunDummy();
     }
 
-    void CastMagic()
+    void CastMagic() //Add more Force
     {
         magic.transform.position = magicStartPos.position;
         magic.SetActive(true);
