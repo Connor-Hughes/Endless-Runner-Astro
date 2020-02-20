@@ -65,6 +65,7 @@
     <Compile Include="Assets\Coin\PickUp.cs" />
     <Compile Include="Assets\Scripts\Deactivate.cs" />
     <Compile Include="Assets\Scripts\DestroyWall.cs" />
+    <Compile Include="Assets\Scripts\DisplayStats.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\GenerateEnviroment.cs" />
     <Compile Include="Assets\Scripts\MainMenuController.cs" />

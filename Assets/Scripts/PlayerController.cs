@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour
     public Texture deadIcon;
     public RawImage[] icons;
 
+    public GameObject gameOverPanel;
+
+    public Text highScore;
+
     void RestartGame()
     {
         SceneManager.LoadScene("ScrollingWorld", LoadSceneMode.Single);
@@ -30,19 +34,43 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Fire" || other.gameObject.tag == "Wall")
+        if ((other.gameObject.tag == "Fire" || other.gameObject.tag == "Wall" ) && !isDead)
         {
             anim.SetTrigger("isDead");
             isDead = true;
             livesLeft--;
             PlayerPrefs.SetInt("lives", livesLeft);
-            Invoke("RestartGame", 1);
+
+            if (livesLeft > 0)
+            {
+                Invoke("RestartGame", 1);
+            }
+            else
+            {
+                icons[0].texture = deadIcon;
+                gameOverPanel.SetActive(true);
+
+                PlayerPrefs.SetInt("lastscore", PlayerPrefs.GetInt("score"));
+                if (PlayerPrefs.HasKey("highscore"))
+                {
+                    int hs = PlayerPrefs.GetInt("highscore");
+                    if (hs < PlayerPrefs.GetInt("score"))
+                    {
+                        PlayerPrefs.SetInt("highscore", PlayerPrefs.GetInt("score"));
+                    }
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("highscore", PlayerPrefs.GetInt("score"));
+                }
+            }
+            
         }
         else
         {
             currentPlatform = other.gameObject;
         }
-        currentPlatform = other.gameObject;
+        //currentPlatform = other.gameObject;
     }
 
     void Start()
@@ -55,8 +83,18 @@ public class PlayerController : MonoBehaviour
 
         GenerateEnviroment.RunDummy();
 
+        if (PlayerPrefs.HasKey("highscore")) ////
+        {
+            highScore.text = "High Score: " + PlayerPrefs.GetInt("highscore");
+        }
+        else
+        {
+            highScore.text = "High Score: 0";
+        }
+        
+
         isDead = false;
-        livesLeft = PlayerPrefs.GetInt("lives"); ///
+        livesLeft = PlayerPrefs.GetInt("lives");
 
         for (int i = 0; i < icons.Length; i++)
         {

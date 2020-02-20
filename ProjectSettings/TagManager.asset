@@ -16,6 +16,8 @@ TagManager:
   - mmButton
   - subPanel
   - gameData
+  - score
+  - highscore
   layers:
   - Default
   - TransparentFX
