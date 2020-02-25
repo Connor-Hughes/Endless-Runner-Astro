@@ -31,6 +31,7 @@ public class GameData : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = "Score: " + score;
+            Debug.Log("HighScore Change");
         }
     }
 

@@ -42,7 +42,7 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadGameScene()
     {
-        PlayerPrefs.SetInt("lives", maxLives); ////
+        PlayerPrefs.SetInt("lives", maxLives);
         SceneManager.LoadScene("ScrollingWorld", LoadSceneMode.Single);
     }
 
