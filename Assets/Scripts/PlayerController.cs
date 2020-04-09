@@ -163,7 +163,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isJumping", true);
             rb.AddForce(Vector3.up * 200);
         }
-        else if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("isJumping") == false)
+        else if (Input.GetKeyDown(KeyCode.E) && anim.GetBool("isJumping") == false)
         {
             anim.SetBool("isMagic", true);
         }
